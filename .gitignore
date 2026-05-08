@@ -1,0 +1,67 @@
+#------ manoj
+
+
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# --- Env / package managers ---
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+!.env.*.example
+.pixi/
+.uv/
+
+# --- Test / type / lint ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+.nox/
+dmypy.json
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- IDE (keep team-shared configs if you use !patterns) ---
+.idea/
+*.iml
+
+# --- Logs / scratch ---
+*.log
+tmp/
+temp/

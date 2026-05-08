@@ -1,0 +1,16 @@
+---
+description: Python monorepo (shared_lib, data processor modules) — read PROJECT.md
+alwaysApply: true
+---
+
+# astro/code repository
+
+**Full guide (read when planning changes):** `cursor_rules/PROJECT.md` at repo root.
+
+## Quick facts
+
+- **`shared_lib/`** — current shared utilities; `SharedResult`-style APIs; `duckdb_create_load.load_file_into_database` for persistent DuckDB + resource limits + CSV rejects. Do not confuse with legacy **`shared_utils`** under `old/`.
+- **`modules_data_processor/*`** — packaged CLIs/tools (e.g. **`file-format-converter`**: only **`convert`**; in-memory DuckDB).
+- **Monorepo:** `shared_lib` is sibling to `modules_data_processor/`; set **`PYTHONPATH`** to repo root when running module `src` layouts (see each module’s `pixi.toml`).
+- **Tests:** `PYTHONPATH=. python3 -m unittest discover -s shared_lib/tests -v` from repo root.
+- **Style:** Prefer small, focused diffs; avoid drive-by refactors. **Base tone / review rules:** see **`agent-base.mdc`** (always on).
